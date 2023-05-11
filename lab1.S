@@ -5,10 +5,10 @@ M:
 .word 4
 
 matrix:
-.word 1, 2, 3
-.word 4, 5, 6
-.word 7, 88, 9
-.word 10, 11, 12
+.word -11, -22, -33
+.word -44, -55, -66
+.word -77, -8, -99
+.word -10, -11, -12
 
 result:
 .word 0
@@ -22,8 +22,6 @@ lw a3, M
 la a4, matrix
 la a5, result
 call process
-#la a2, M
-#la a3, result
 call print
 call exit
 
@@ -40,9 +38,8 @@ addi a0, x0, 10
 ecall
 
 process:
-
 addi t4, x0, 0 # row pointer
-addi t2, x0, 0  # temp var - max item
+lw t2, 0(a4) # # temp var - max item = first array item
 
 init:
 addi t3, x0, 0 # row element number

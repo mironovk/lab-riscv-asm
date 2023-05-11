@@ -9,6 +9,7 @@ void printer(int arr[][M]);
 int main()
 {
 	int arr[N][M] = {{0, 1, 2}, {3, 4, 5}, {66, 77, 8}, {9, 10, 11}};
+	//int arr[N][M] = {{-10, -11, -22}, {-33, -44, -5}, {-66, -77, -88}, {-99, -110, -111}};	// check negative numbers
 	int index[2] = {0, 0};
 	printer(arr);
 
